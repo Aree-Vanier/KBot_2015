@@ -1,5 +1,6 @@
 package KBot;
 
+import KBot.OperatorController;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 

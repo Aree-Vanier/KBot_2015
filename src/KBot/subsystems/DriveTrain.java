@@ -22,6 +22,9 @@ public class DriveTrain extends Subsystem {
     
     public void drive(double left, double right, boolean leftTrigger, boolean rightTrigger)
     {
+    	
+    	System.out.println(RobotMap.driveEncoderLeft.get() + "\t" + RobotMap.driveEncoderRight.get());
+    	
     	if (Math.abs(left) < DEADBAND)
     		left = 0;
     	if (Math.abs(right) < DEADBAND)

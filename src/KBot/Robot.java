@@ -1,6 +1,7 @@
 
 package KBot;
 
+import KBot.commands.AutonomousCommand;
 import KBot.commands.DriveController;
 import KBot.subsystems.DriveTrain;
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -49,7 +50,7 @@ public class Robot extends IterativeRobot {
 		teleopCommand = new DriveController();
 		countdown = new Timer();
 		
-    
+		autonomousCommand = new AutonomousCommand();
     }
     
     private void setAutonomousMode() {
@@ -60,7 +61,6 @@ public class Robot extends IterativeRobot {
         autonomousEnabled = isAutonomous();
 		setAutonomousMode();
 		
-        if (teleopCommand != null) teleopCommand.cancel();		//TODO: should not be needed
         if (autonomousCommand != null)
         {
         	System.out.println("starting autonomous command");
